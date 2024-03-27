@@ -1,0 +1,23 @@
+<h2>Contact page</h2>
+<br></br>
+<h4>Contact of the creator:</h4>
+<h5>Name: Benjamín Figari Troncoso</h5>
+<h5>Email: bfigari1@miuandes.cl</h5>
+<br></br>
+<div class="container">
+  <h3>Complete this forms to contact: </h3>
+  <%= form_with(url: send_message_path, method: :post, local: true) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control" %>
+    <%= form.submit "Submit", class: "btn btn-primary mt-3" %>
+  <% end %>
+</div>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
